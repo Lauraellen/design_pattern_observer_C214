@@ -20,9 +20,10 @@ public class Observavel implements iObservavel {
     }
 
     @Override
-    public void contarPalavras(String frase) {
+    public Object contarPalavras(String frase) {
         List<String> palavras = obterPalavras(frase);
         notificarObservadores(palavras);
+        return null;
     }
 
     @Override
