@@ -3,5 +3,5 @@ package org.example;
 import java.util.List;
 
 public interface iObservador {
-    int atualizar(List<String> palavras);
+    public void atualizar(List<String> palavras);
 }

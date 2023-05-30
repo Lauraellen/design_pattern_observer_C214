@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Observavel implements iObservavel {
-    public List<iObservador> observadores;
+    private List<iObservador> observadores;
 
     public Observavel() {
         observadores = new ArrayList<>();
@@ -20,10 +20,9 @@ public class Observavel implements iObservavel {
     }
 
     @Override
-    public Object contarPalavras(String frase) {
+    public void contarPalavras(String frase) {
         List<String> palavras = obterPalavras(frase);
         notificarObservadores(palavras);
-        return null;
     }
 
     @Override

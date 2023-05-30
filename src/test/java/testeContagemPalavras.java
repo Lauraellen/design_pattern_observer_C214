@@ -9,9 +9,10 @@ public class testeContagemPalavras {
         Observavel observavel = new Observavel();
         ObservadorContagemTotalPalavras observadorTotal = new ObservadorContagemTotalPalavras();
 
-        observavel.adicionarObservador(observadorTotal);
         String frase = "Primeiro teste";
-        assertEquals(observavel.contarPalavras(frase), 2);
+        observavel.adicionarObservador(observadorTotal);
+        observavel.contarPalavras(frase);
+        assertEquals(2, observadorTotal.getContagem());
     }
 
 }

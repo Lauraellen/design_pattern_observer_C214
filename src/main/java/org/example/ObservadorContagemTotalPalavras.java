@@ -3,9 +3,14 @@ package org.example;
 import java.util.List;
 
 public class ObservadorContagemTotalPalavras implements iObservador {
+    private int contagem = 0;
+
     @Override
-    public int atualizar(List<String> palavras) {
-        int contagem = palavras.size();
+    public void atualizar(List<String> palavras) {
+        contagem = palavras.size();
+    }
+
+    public int getContagem() {
         return contagem;
     }
 }
