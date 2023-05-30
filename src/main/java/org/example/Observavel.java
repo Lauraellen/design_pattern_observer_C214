@@ -1,5 +1,6 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Observavel implements iObservavel {
@@ -27,6 +28,11 @@ public class Observavel implements iObservavel {
 
     @Override
     public List<String> obterPalavras(String frase) {
+
+        if(frase == "" ) {
+            throw new EmptyStackException();
+        }
+
         List<String> palavras = new ArrayList<>();
         String[] tokens = frase.split("\\s+");
 
