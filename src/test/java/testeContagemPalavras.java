@@ -13,10 +13,10 @@ public class testeContagemPalavras {
         Observavel observavel = new Observavel();
         ObservadorContagemTotalPalavras observadorTotal = new ObservadorContagemTotalPalavras();
 
-        String frase = "Primeiro teste";
+        String frase = "Faça sempre o seu melhor";
         observavel.adicionarObservador(observadorTotal);
         observavel.contarPalavras(frase);
-        assertEquals(2, observadorTotal.getContagem());
+        assertEquals(5, observadorTotal.getContagem());
     }
 
     @Test
@@ -24,10 +24,10 @@ public class testeContagemPalavras {
         Observavel observavel = new Observavel();
         ObservadorContagemPalavrasComTamanhoPar observadorPar = new ObservadorContagemPalavrasComTamanhoPar();
 
-        String frase = "Segundo test";
+        String frase = "A mudança é a única constante na vida";
         observavel.adicionarObservador(observadorPar);
         observavel.contarPalavras(frase);
-        assertEquals(1, observadorPar.getContagem());
+        assertEquals(2, observadorPar.getContagem());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class testeContagemPalavras {
         Observavel observavel = new Observavel();
         ObservadorContagemPalavrasComMaiuscula observadorMaiuscula = new ObservadorContagemPalavrasComMaiuscula();
 
-        String frase = "Terceiro Teste com Maiuscula";
+        String frase = "A vida é uma Jornada não um Destino";
         observavel.adicionarObservador(observadorMaiuscula);
         observavel.contarPalavras(frase);
         assertEquals(3, observadorMaiuscula.getContagem());
